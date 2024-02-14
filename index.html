@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter font-medium:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!--* Style   -->
     <link rel="stylesheet" href="styles/style.css">
@@ -23,11 +23,12 @@
 <body>
 
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <section class="home min-h-screen flex   justify-center text-center items-center ">
+        <!-- Home Screen -->
+        <section class="home min-h-screen flex   justify-center text-center items-center hidden">
 
             <div class="flex flex-col items-center gap-10">
-                <h1 class="text-8xl text-[#ffffff] font-normal anton ">ALPHABET CLASH</h1>
-                <p class="text-[#ffffff] text-2xl font-medium  poppens">Unleash Your Keyboard Kung Fu :
+                <h1 class="text-7xl text-[#ffffff] font-normal anton ">ALPHABET CLASH</h1>
+                <p class="text-[#ffffff] text-xl font-medium  poppens">Unleash Your Keyboard Kung Fu :
                     Press “Enter” to Play</p>
                 <button class="btn bg-[#ffffff] text-2xl font-semibold text-[#010313] poppens border-none">Play
                     Now</button>
@@ -35,14 +36,105 @@
 
         </section>
 
-        <section class="play-ground"></section>
-        <section class="score"></section>
+        <!-- play Ground Start -->
+        <section class="play-ground hidden">
+            <!-- PlayGround Container -->
+            <!-- Screen -->
+            <div class="flex flex-col items-center gap-10  pt-5">
+                <div class="artboard artboard-horizontal phone-6  border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3] 
+    ">
+                    <div class="flex justify-center ">
+                        <p class="poppens text-[#FFFFFF] font-medium text-lg  bg-[#2F2941] px-3  py-2 rounded-b-xl">
+                            Don't
+                            watch keyboard while
+                            playing...</p>
+                    </div>
+
+                    <div class="flex justify-center items-center h-full">
+                        <p class="poppens text-[#010313] font-semibold text-9xl  ">Y</p>
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- Keybord Starts-->
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">q</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">w</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">e</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">r</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">t</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">y</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">u</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">i</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">o</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">a</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">s</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">d</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">f</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">g</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">h</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">j</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">k</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">z</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">x</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">c</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">v</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">b</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">n</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">m</kbd>
+                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">/</kbd>
+                    </div>
+                </div>
+                <!-- Keybord end-->
+                <!-- life Score -->
+                <div class="flex justify-between w-3/4">
+                    <button class="btn rounded-full px-4 bg-[#894189]">Life
+                        <img src="images/Group 23.svg" alt=""> <span>1</span>
+
+                    </button>
+                    <button class="btn rounded-full px-4 bg-[#360490]">Score
+                        <img src="images/monetization_on.svg" alt="">
+                        <span>1</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            </div>
+        </section>
+        <!-- play Ground end -->
+
+        <!-- Score -->
+        <section class="score flex justify-center items-center h-screen">
+            <div
+                class="text-[#FFFFFF] poppens text-center h-[282px] scoreBox w-[396px] py-11 px-12 items-center gap-4 flex flex-col">
+                <h1 class="text-6xl">
+                    <span class="font-extrabold">Score : </span>
+                    <span>14</span>
+                </h1>
+                <button class="btn bg-white font-semibold text-[#010313] text-2xl   border-none outline-none">Play
+                    Again</button>
+                <p class="font-medium text-xl">Practice will make you Pro</p>
+            </div>
+        </section>
     </main>
 
 
 
 
     <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/9a67b7fa89.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
