@@ -24,10 +24,10 @@
 
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- Home Screen -->
-        <section id="home-Screen" class="home min-h-screen flex   justify-center text-center items-center">
+        <section id="home-Screen" class="home min-h-screen flex   justify-center text-center items-center ">
 
             <div class="flex flex-col items-center gap-10">
-                <h1 class="text-7xl text-[#ffffff] font-normal anton ">ALPHABET CLASH</h1>
+                <h1 class="text-8xl text-[#ffffff] font-normal anton ">ALPHABET CLASH</h1>
                 <p class="text-[#ffffff] text-xl font-medium  poppens">Unleash Your Keyboard Kung Fu :
                     Press “Enter” to Play</p>
                 <button class="btn bg-[#ffffff] text-2xl font-semibold text-[#010313] poppens border-none"
@@ -122,14 +122,15 @@
         <!-- play Ground end -->
 
         <!-- Score -->
-        <section class="score flex justify-center items-center h-screen hidden">
+        <section id="ScoreGround" class="score flex justify-center items-center h-screen hidden">
             <div
                 class="text-[#FFFFFF] poppens text-center h-[282px] scoreBox w-[396px] py-11 px-12 items-center gap-4 flex flex-col">
                 <h1 class="text-6xl">
                     <span class="font-extrabold">Score : </span>
-                    <span>14</span>
+                    <span id="game-Score">14</span>
                 </h1>
-                <button class="btn bg-white font-semibold text-[#010313] text-2xl   border-none outline-none">Play
+                <button class="btn bg-white font-semibold text-[#010313] text-2xl   border-none outline-none"
+                    onclick="play()">Play
                     Again</button>
                 <p class="font-medium text-xl">Practice will make you Pro</p>
             </div>
