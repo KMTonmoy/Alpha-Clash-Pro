@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -24,20 +24,27 @@
 
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- Home Screen -->
-        <section class="home min-h-screen flex   justify-center text-center items-center hidden">
+        <section id="home-Screen" class="home min-h-screen flex   justify-center text-center items-center">
 
             <div class="flex flex-col items-center gap-10">
                 <h1 class="text-7xl text-[#ffffff] font-normal anton ">ALPHABET CLASH</h1>
                 <p class="text-[#ffffff] text-xl font-medium  poppens">Unleash Your Keyboard Kung Fu :
                     Press “Enter” to Play</p>
-                <button class="btn bg-[#ffffff] text-2xl font-semibold text-[#010313] poppens border-none">Play
-                    Now</button>
+                <button class="btn bg-[#ffffff] text-2xl font-semibold text-[#010313] poppens border-none"
+                    onclick="play()">Play Now</button>
             </div>
 
         </section>
 
+
+
+
+
+
+
+
         <!-- play Ground Start -->
-        <section class="play-ground hidden">
+        <section id="playGorund" class="play-ground hidden">
             <!-- PlayGround Container -->
             <!-- Screen -->
             <div class="flex flex-col items-center gap-10  pt-5">
@@ -51,7 +58,7 @@
                     </div>
 
                     <div class="flex justify-center items-center h-full">
-                        <p class="poppens text-[#010313] font-semibold text-9xl  ">Y</p>
+                        <p class="poppens text-[#010313] font-semibold text-9xl uppercase " id="current-Alphabet"></p>
                     </div>
 
 
@@ -62,49 +69,48 @@
                 <!-- Keybord Starts-->
                 <div>
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">q</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">w</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">e</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">r</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">t</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">y</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">u</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">i</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">o</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">p</kbd>
+                        <kbd id="q" class="kbd w-14 h-12 text-[#010313] inter font-medium">q</kbd>
+                        <kbd id="w" class="kbd w-14 h-12 text-[#010313] inter font-medium">w</kbd>
+                        <kbd id="e" class="kbd w-14 h-12 text-[#010313] inter font-medium">e</kbd>
+                        <kbd id="r" class="kbd w-14 h-12 text-[#010313] inter font-medium">r</kbd>
+                        <kbd id="t" class="kbd w-14 h-12 text-[#010313] inter font-medium">t</kbd>
+                        <kbd id="y" class="kbd w-14 h-12 text-[#010313] inter font-medium">y</kbd>
+                        <kbd id="u" class="kbd w-14 h-12 text-[#010313] inter font-medium">u</kbd>
+                        <kbd id="i" class="kbd w-14 h-12 text-[#010313] inter font-medium">i</kbd>
+                        <kbd id="o" class="kbd w-14 h-12 text-[#010313] inter font-medium">o</kbd>
+                        <kbd id="p" class="kbd w-14 h-12 text-[#010313] inter font-medium">p</kbd>
                     </div>
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">a</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">s</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">d</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">f</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">g</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">h</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">j</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">k</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">l</kbd>
+                        <kbd id="a" class="kbd w-14 h-12 text-[#010313] inter font-medium">a</kbd>
+                        <kbd id="s" class="kbd w-14 h-12 text-[#010313] inter font-medium">s</kbd>
+                        <kbd id="d" class="kbd w-14 h-12 text-[#010313] inter font-medium">d</kbd>
+                        <kbd id="f" class="kbd w-14 h-12 text-[#010313] inter font-medium">f</kbd>
+                        <kbd id="g" class="kbd w-14 h-12 text-[#010313] inter font-medium">g</kbd>
+                        <kbd id="h" class="kbd w-14 h-12 text-[#010313] inter font-medium">h</kbd>
+                        <kbd id="j" class="kbd w-14 h-12 text-[#010313] inter font-medium">j</kbd>
+                        <kbd id="k" class="kbd w-14 h-12 text-[#010313] inter font-medium">k</kbd>
+                        <kbd id="l" class="kbd w-14 h-12 text-[#010313] inter font-medium">l</kbd>
                     </div>
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">z</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">x</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">c</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">v</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">b</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">n</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">m</kbd>
-                        <kbd class="kbd bg-[#fff] w-14 h-12 text-[#010313] inter font-medium">/</kbd>
+                        <kbd id="z" class="kbd w-14 h-12 text-[#010313] inter font-medium">z</kbd>
+                        <kbd id="x" class="kbd w-14 h-12 text-[#010313] inter font-medium">x</kbd>
+                        <kbd id="c" class="kbd w-14 h-12 text-[#010313] inter font-medium">c</kbd>
+                        <kbd id="v" class="kbd w-14 h-12 text-[#010313] inter font-medium">v</kbd>
+                        <kbd id="b" class="kbd w-14 h-12 text-[#010313] inter font-medium">b</kbd>
+                        <kbd id="n" class="kbd w-14 h-12 text-[#010313] inter font-medium">n</kbd>
+                        <kbd id="m" class="kbd w-14 h-12 text-[#010313] inter font-medium">m</kbd>
+                        <kbd id="/" class="kbd w-14 h-12 text-[#010313] inter font-medium">/</kbd>
                     </div>
                 </div>
                 <!-- Keybord end-->
                 <!-- life Score -->
                 <div class="flex justify-between w-3/4">
-                    <button class="btn rounded-full px-4 bg-[#894189]">Life
-                        <img src="images/Group 23.svg" alt=""> <span>1</span>
-
+                    <button class="btn rounded-full px-4 bg-[#894189] text-white outline-none border-none">Life
+                        <img src="images/Group 23.svg" alt=""> <span id="current-Life">5</span>
                     </button>
-                    <button class="btn rounded-full px-4 bg-[#360490]">Score
+                    <button class="btn rounded-full px-4 bg-[#360490] text-white outline-none border-none">Score
                         <img src="images/monetization_on.svg" alt="">
-                        <span>1</span>
+                        <span id="current-Score">0</span>
                     </button>
 
                 </div>
@@ -116,7 +122,7 @@
         <!-- play Ground end -->
 
         <!-- Score -->
-        <section class="score flex justify-center items-center h-screen">
+        <section class="score flex justify-center items-center h-screen hidden">
             <div
                 class="text-[#FFFFFF] poppens text-center h-[282px] scoreBox w-[396px] py-11 px-12 items-center gap-4 flex flex-col">
                 <h1 class="text-6xl">
@@ -132,9 +138,8 @@
 
 
 
-
+    <script src="scripts/utility.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="https://kit.fontawesome.com/9a67b7fa89.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
